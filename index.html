@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>login and registration</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+      <script src="index.js"></script>
+    <div class="Login-page">
+      <div class="form">
+        <form class="registration-form">
+          <input type="text" placeholder="Username" id="name" />
+          <input type="password" placeholder="Password" id="pass" />
+          <input type="email" placeholder="Email" />
+          <button onclick="return add()">create</button>
+          <p class="message">Already registered <a href="#">Login</a></p>
+        </form>
+
+        <form
+          onsubmit="return validation()"
+          action="message.html"
+          class="login-form"
+        >
+          <input type="text" placeholder="username" id="n"/>
+          <input type="password" placeholder="password" id="p" />
+          <button>Login</button>
+          <p class="message">not registered? <a href="#">Register</a></p>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js
+"></script>
+
+    <script>
+      $(".message a").click(function() {
+        $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+      });
+
+      
+    </script>
+  </body>
+</html>
+ <!--this icon size of pwa manifest iicons size:72x72,96x96,128x128,144x144,152x152,192x192,384x384,512x512 -->
